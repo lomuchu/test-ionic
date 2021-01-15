@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">App</ion-label>
+    <ion-input type="text" [(ngModel)]="app"></ion-input>
+  </ion-item>
+  
+    <ion-button expand="block" color="primary" (click)="login()">Iniciar Sesion</ion-button>
+  
+    <ion-button size="small" fill="clear" routerLink="/signup">Registrarme</ion-button>
+  <!-- <ion-button size="small" fill="clear" routerLink="/password-recover">Olvide mi contraseña</ion-button> -->
+  
+  </ion-content>

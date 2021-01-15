@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-toolbar>
+
+     <ion-buttons slot="start">
+       <!-- <ion-button (click)="toggleMenu()">
+        <ion-icon slot="icon-only" name="menu"></ion-icon>
+      </ion-button>   -->
+      <ion-menu-button color="primary"
+                       menu="primerMenu">
+      </ion-menu-button>
+    </ion-buttons> 
+
+    <ion-title color="primary">Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid class="ion-margin">
+    <ion-row>
+      <ion-col>BookingId</ion-col>
+      <ion-col>Cliente</ion-col>
+      <ion-col>Fecha de Creación</ion-col>
+      <ion-col>Dirección</ion-col>
+      <ion-col>Precio</ion-col>
+    </ion-row>
+    <ion-row *ngFor="let item of dataFilter;">
+      <ion-col>{{ item.bookingId }}</ion-col>
+      <ion-col>{{ item.tutenUserClient.firstName }} {{item.tutenUserClient.lastName}}</ion-col>
+      <ion-col>{{ item.bookingTime }}</ion-col>
+      <ion-col>{{ item.locationId.streetAddress }}</ion-col>
+      <ion-col>{{ item.bookingPrice }}</ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-item lines="none">
+    <ion-button color="primary" size="small" slot="end" (click)="openModal()">
+      Filtrar Datos
+    </ion-button>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal-filter</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Campo</ion-label>
+    <ion-select [(ngModel)]="campo" placeholder="Seleccione...">
+      <ion-select-option value="bookingId">BookingId</ion-select-option>
+      <ion-select-option value="bookingPrice">Precio</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Expresion</ion-label>
+    <ion-select [(ngModel)]="expresion" placeholder="Seleccione...">
+      <ion-select-option value="1">Igual a</ion-select-option>
+      <ion-select-option value="2">Mayor igual a</ion-select-option>
+      <ion-select-option value="3">Menor igual a</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Valor</ion-label>
+    <ion-input type="text" [(ngModel)]="valor"></ion-input>
+  </ion-item>
+
+  <ion-button color="secondary" expand="full"
+            (click)="salir()">
+    Filtrar
+  </ion-button>
+</ion-content>
